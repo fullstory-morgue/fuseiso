@@ -1,0 +1,13 @@
+Source: fuseiso
+Section: admin
+Priority: optional
+Maintainer: Kel Modderman <kelrin@tpg.com.au>
+Build-Depends: cdbs, autotools-dev, debhelper (>= 5), libfuse-dev, libglib2.0-dev, zlib1g-dev
+Standards-Version: 3.7.2
+
+Package: fuseiso
+Architecture: any
+Depends: ${shlibs:Depends}, fuse-utils
+Description: mount ziso images with FUSE
+ This tool allows you to mount ziso image with the help of
+ FUSE technology.
