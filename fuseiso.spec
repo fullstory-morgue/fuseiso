@@ -1,4 +1,4 @@
-%define reldate 20061017
+%define reldate 20070116
 Name:           fuseiso
 Version:        1.3
 Release:        0.%{reldate}%{?dist}

@@ -92,7 +92,8 @@ int isofs_real_preinit( char* imagefile, int fd) {
                 size, iso_offsets[i], sizeof(struct iso_volume_descriptor));
             exit(EIO);
         };
-        if(strncmp("CD001", vd->id, 5) == 0) {
+        char *vd_id = (char *) vd->id;
+        if(strncmp("CD001", vd_id, 5) == 0) {
             // found CD001!
             // fill context with information about block size and block offsets
             context.id_offset = iso_offsets[i];
@@ -115,12 +116,12 @@ int isofs_real_preinit( char* imagefile, int fd) {
                     break;
             };
             break;
-        } else if(strncmp("CD001", ((char*) vd->id) + 16, 5) == 0) {
+        } else if(strncmp("CD001", vd_id + 16, 5) == 0) {
             context.id_offset = iso_offsets[i] + 16;
             context.block_size = 2352;
             context.block_offset = 16;
             break;
-        } else if(strncmp("CD001", ((char*) vd->id) + 24, 5) == 0) {
+        } else if(strncmp("CD001", vd_id + 24, 5) == 0) {
             context.id_offset = iso_offsets[i] + 24;
             context.block_size = 2352;
             context.block_offset = 24;
