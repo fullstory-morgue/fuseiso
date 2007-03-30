@@ -2,6 +2,7 @@ Source: fuseiso
 Section: admin
 Priority: optional
 Maintainer: Kel Modderman <kelrin@tpg.com.au>
+Uploaders: Stefan Lippers-Hollmann <s.l-h@gmx.de>
 Build-Depends: cdbs, autotools-dev, debhelper (>= 5), libfuse-dev, libglib2.0-dev, zlib1g-dev
 Standards-Version: 3.7.2
 
