@@ -344,6 +344,7 @@ int main(int argc, char *argv[])
     
     image_fd = open(imagefile, O_RDONLY);
     if(image_fd == -1) {
+        fprintf(stderr, "Supplied image file name: \"%s\"\n", imagefile);
         perror("Can`t open image file");
         exit(EXIT_FAILURE);
     };
