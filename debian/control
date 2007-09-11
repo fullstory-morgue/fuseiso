@@ -4,6 +4,8 @@ Priority: optional
 Maintainer: David Paleino <d.paleino@gmail.com>
 Build-Depends: debhelper (>= 5), autotools-dev, libfuse-dev, zlib1g-dev, libglib2.0-dev, xsltproc, docbook-xsl, docbook-xml
 Standards-Version: 3.7.2
+XS-Vcs-Svn: svn://svn.berlios.de/fullstory/fuseiso/trunk
+XS-Vcs-Browser: http://svn.berlios.de/wsvn/fullstory/fuseiso/trunk/
 
 Package: fuseiso
 Architecture: any
